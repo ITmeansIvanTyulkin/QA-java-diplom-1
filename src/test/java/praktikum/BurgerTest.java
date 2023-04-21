@@ -22,6 +22,8 @@ public class BurgerTest {
         buns.add(new Bun("Кунжутная булочка", 100));
         buns.add(new Bun("Карамельная булочка", 200));
         buns.add(new Bun("Обычная булочка", 300));
+        buns.add(new Bun("Маковая булочка", 0));    // Баг. Цена за булочку не может быть ноль рублей (либо только по акции).
+        buns.add(new Bun("Рисовая булочка", -100)); // Баг. Цена за булочку не может быть отрицательной.
         Mockito.when(database.availableBuns()).thenReturn(buns);
         List<Ingredient> ingredients = new ArrayList<>();
         ingredients.add(new Ingredient(IngredientType.SAUCE, "hot sauce", 100));
