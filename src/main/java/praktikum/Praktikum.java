@@ -19,7 +19,6 @@ public class Praktikum {
 
         // Соберём бургер
         burger.setBuns(buns.get(0));
-
         burger.addIngredient(ingredients.get(1));
         burger.addIngredient(ingredients.get(4));
         burger.addIngredient(ingredients.get(3));
@@ -34,5 +33,4 @@ public class Praktikum {
         // Распечатаем рецепт бургера
         System.out.println(burger.getReceipt());
     }
-
 }
